@@ -41,7 +41,7 @@ namespace DevFleet.Models
         Abeokuta,
         Owerri
     }
-    public enum Colors
+    public enum Color
     {
         White,
         Black,

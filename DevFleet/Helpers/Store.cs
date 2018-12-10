@@ -23,7 +23,7 @@ namespace DevFleet.Helpers
             throw new NotImplementedException();
         }
 
-        internal static FleetResponse FetchById(int id)
+        internal static FleetResponse FetchById(string guid)
         {
             throw new NotImplementedException();
         }
@@ -33,7 +33,7 @@ namespace DevFleet.Helpers
             throw new NotImplementedException();
         }
 
-        internal static FleetResponse Delete(int id)
+        internal static FleetResponse Delete(string guid)
         {
             throw new NotImplementedException();
         }
