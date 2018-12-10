@@ -9,7 +9,7 @@ namespace DevFleet.Helpers
     {
         internal static void LogError(Exception ex)
         {
-            throw new NotImplementedException();
+           
         }
     }
 }

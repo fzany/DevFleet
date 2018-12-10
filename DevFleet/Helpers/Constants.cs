@@ -15,5 +15,7 @@ namespace DevFleet.Helpers
         public const string Empty_List = "Empty List";
         public const string Provide_Engine_Number = "Provide Engine Number";
         public const string Provide_Plate_Number = "Provide Plate Number";
+        public const string Provide_Guid = "Provide Guid";
+
     }
 }

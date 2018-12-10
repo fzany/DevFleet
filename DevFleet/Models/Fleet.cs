@@ -14,14 +14,23 @@ namespace DevFleet.Models
         [BsonId]
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         public string Guid { get; set; }
+        /// <summary>
+        /// Unique field
+        /// </summary>
         public string Engine_Number { get; set; } = string.Empty;
+        /// <summary>
+        /// Unique field
+        /// </summary>
         public string Plate_Number { get; set; } = string.Empty;
-        public string Serial_Number { get; set; } = string.Empty;
+        public string Insurance_Number { get; set; } = string.Empty;
         public int Purchase_Year { get; set; }
         public int Trips_Count { get; set; }
         public int Number_of_Seaters { get; set; }
+        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
         public DateTime Insurance_Expiry { get; set; }
+        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
         public DateTime Last_Repair { get; set; }
+        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
         public DateTime Acquired { get; set; }
         public bool Is_In_Good_Condition { get; set; }
         public Driver Driver { get; set; }

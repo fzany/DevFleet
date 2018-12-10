@@ -17,4 +17,9 @@ namespace DevFleet.Models
         public bool Status { get; set; }
         public List<Fleet> Data { get; set; }
     }
+    public class GeneralResponse
+    {
+        public string Message { get; set; } = string.Empty;
+        public bool Status { get; set; }
+    }
 }

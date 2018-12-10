@@ -111,16 +111,16 @@ namespace DevFleet.Controllers
         /// <summary>
         /// API to fetch fleets by 
         /// </summary>
-        /// <param name="cat"></param>
+        /// <param name="type"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("fleet/fetch/cat/{category}")]
-        public ActionResult<FleetResponses> FetchByCategory(int cat)
+        [Route("fleet/fetch/type/{type}")]
+        public ActionResult<FleetResponses> FetchByCategory(int type)
         {
             FleetResponses fleets = new FleetResponses();
             try
             {
-                fleets = Store.FetchByCategory(cat);
+                fleets = Store.FetchByType(type);
                 return fleets;
             }
             catch (Exception ex)
@@ -139,20 +139,20 @@ namespace DevFleet.Controllers
         /// <returns></returns>
         [HttpDelete]
         [Route("fleet/delete/{guid}")]
-        public ActionResult<FleetResponse> Delete(string guid)
+        public ActionResult<GeneralResponse> Delete(string guid)
         {
-            FleetResponse fleet = new FleetResponse();
+            GeneralResponse response = new GeneralResponse();
             try
             {
-                fleet = Store.Delete(guid);
-                return fleet;
+                response = Store.Delete(guid);
+                return response;
             }
             catch (Exception ex)
             {
                 Log.LogError(ex);
-                fleet.Message = Constants.Error;
-                fleet.Status = false;
-                return fleet;
+                response.Message = Constants.Error;
+                response.Status = false;
+                return response;
             }
         }
     }
