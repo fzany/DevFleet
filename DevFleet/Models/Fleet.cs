@@ -38,6 +38,7 @@ namespace DevFleet.Models
         public Color Colour { get; set; }
         public Commute_Origin Origin { get; set; }
         public Commute_Destination Destination  { get; set; }
+        public Manufacturer Manufacturer { get; set; }
 
     }
 }

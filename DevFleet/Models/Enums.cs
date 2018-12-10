@@ -49,6 +49,15 @@ namespace DevFleet.Models
         Blue
     }
 
+    public enum Manufacturer
+    {
+        Toyota,
+        Mitsubishi,
+        Infiniti,
+        Isuzu,
+        Honda
+    }
+
     public enum Driver
     {
         David_Olatunde, Sola_Kutiyi,
