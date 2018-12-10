@@ -5,16 +5,12 @@ using System.Threading.Tasks;
 
 namespace DevFleet.Models
 {
-    public class FleetResponse
+    public class FleetResponse: GeneralResponse
     {
-        public string Message { get; set; } = string.Empty;
-        public bool Status { get; set; }
         public Fleet Data { get; set; }
     }
-    public class FleetResponses
+    public class FleetResponses: GeneralResponse
     {
-        public string Message { get; set; } = string.Empty;
-        public bool Status { get; set; }
         public List<Fleet> Data { get; set; }
     }
     public class GeneralResponse
